@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var dummy = ""
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("The data in clipboard was cleared!").font(.title3).padding()
+            
+            Text("If you don't believe it, you can try pasting in the following text box.").font(.footnote).padding()
+            
+            TextField("test area", text: $dummy).textFieldStyle(RoundedBorderTextFieldStyle()).padding()
+        }
     }
 }
 
