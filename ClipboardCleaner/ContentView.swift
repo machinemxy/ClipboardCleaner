@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("The text in clipboard was cleared!")
+                Text("The text in clipboard was removed!")
                     .font(.title3)
                     .padding()
                 
@@ -30,7 +30,7 @@ struct ContentView: View {
             .alert(isPresented: $showAlert, content: {
                 Alert(title: Text("Remind"), message: Text("The rating view may not be displayed depending on your setting. In that case you can also rate it in App Store."), dismissButton: .default(Text("OK")))
             })
-            .navigationBarTitle(Text("Cleaner"), displayMode: .inline)
+            .navigationBarTitle(Text("Eraser"), displayMode: .inline)
             .navigationBarItems(trailing: Button("Rate", action: {
                 if let scene = UIApplication.shared.currentScene {
                     SKStoreReviewController.requestReview(in: scene)
