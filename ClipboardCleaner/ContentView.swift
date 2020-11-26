@@ -10,7 +10,6 @@ import StoreKit
 
 struct ContentView: View {
     @State private var dummy = ""
-    @State private var showAlert = false
     
     var body: some View {
         NavigationView {
@@ -27,15 +26,12 @@ struct ContentView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
             }
-            .alert(isPresented: $showAlert, content: {
-                Alert(title: Text("Remind"), message: Text("The rating view may not be displayed depending on your setting. In that case you can also rate it in App Store."), dismissButton: .default(Text("OK")))
-            })
             .navigationBarTitle(Text("Clipboard Eraser"), displayMode: .inline)
             .navigationBarItems(trailing: Button("Rate", action: {
-                if let scene = UIApplication.shared.currentScene {
-                    SKStoreReviewController.requestReview(in: scene)
+                guard let writeReviewURL = URL(string: "https://apps.apple.com/app/id1538447301?action=write-review") else {
+                    fatalError("Expected a valid URL")
                 }
-                showAlert = true
+                UIApplication.shared.open(writeReviewURL, options: [:], completionHandler: nil)
             }))
         }.navigationViewStyle(StackNavigationViewStyle())
         
