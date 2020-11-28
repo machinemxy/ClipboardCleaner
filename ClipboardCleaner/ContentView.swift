@@ -14,20 +14,20 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("The text in clipboard was cleared!")
+                Text("TEXT1")
                     .font(.title3)
                     .padding()
                 
-                Text("If you don't believe it, you can try pasting in the following text box.")
+                Text("TEXT2")
                     .font(.footnote)
                     .padding()
                 
-                TextField("paste area", text: $dummy)
+                TextField("PASTE_AREA", text: $dummy)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
             }
-            .navigationBarTitle(Text("Clipboard Eraser"), displayMode: .inline)
-            .navigationBarItems(trailing: Button("Rate", action: {
+            .navigationBarTitle(Text("TITLE"), displayMode: .inline)
+            .navigationBarItems(trailing: Button("RATE", action: {
                 guard let writeReviewURL = URL(string: "https://apps.apple.com/app/id1538447301?action=write-review") else {
                     fatalError("Expected a valid URL")
                 }

@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  ClipboardCleaner
+
+  Created by Ma Xueyuan on 2020/11/28.
+  
+*/
+"TITLE" = "消すもの";
+"TEXT1" = "クリップボードの中のテキストは消されました！";
+"TEXT2" = "もし信じないなら下のテキストエリアにペーストしてみよう。";
+"PASTE_AREA" = "ペーストエリア";
+"RATE" = "評価";

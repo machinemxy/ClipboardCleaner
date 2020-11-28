@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  ClipboardCleaner
+
+  Created by Ma Xueyuan on 2020/11/28.
+  
+*/
+"TITLE" = "Clipboard Eraser";
+"TEXT1" = "The text in clipboard was cleared!";
+"TEXT2" = "If you don't believe it, you can try pasting in the following text box.";
+"PASTE_AREA" = "paste area";
+"RATE" = "Rate";
