@@ -22,7 +22,7 @@ struct ContentView: View {
                     .font(.footnote)
                     .padding()
                 
-                TextField("PASTE_AREA", text: $dummy)
+                TextField(LocalizedStringKey("PASTE_AREA"), text: $dummy)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
             }
